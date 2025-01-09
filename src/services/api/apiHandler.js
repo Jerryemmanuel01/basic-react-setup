@@ -2,7 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Ensure `Returned` can be any type, but provide a more specific type for the result
 export const createAsyncThunkWithHandler = (
-  name,
+  name, thunkFunction
   ) =>
   createAsyncThunk(name, async (arg, thunkAPI) => {
     try {
